@@ -47,3 +47,8 @@ Adopt pet body:
     "pet_id": 1
 }`
 
+## Deployment
+
+This code was deployed to heroku as well and the URL of the app is: https://crud-challenge-rollee.herokuapp.com/persons Note that this is using the heroku free tier, so the app sleeps if it is not used for some time and it can be kind of slow to start up again. Once it's started it should work normally.
+
+The deployment was added after the 2 days deadline because the Heroku build was failing, as it was using a Go version lower than 1.13, and [Gorm needs a greater version than that](https://stackoverflow.com/questions/64773490/error-reflect-valueofval-iszero-undefined-type-reflect-value-has-no-field-or) because of the `IsZero` `reflect.Value` method.
